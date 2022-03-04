@@ -22,17 +22,31 @@ namespace VendorOrder.Tests
     }
 
     [TestMethod]
-  public void GetName_ReturnsName_String()
-  {
-    //Arrange
-    string name = "Test Vendor";
-    Vendor vendor = new Vendor(name);
+    public void GetName_ReturnsName_String()
+    {
+      //Arrange
+      string name = "Test Vendor";
+      Vendor vendor = new Vendor(name);
 
-    //Act
-    string result = vendor.Name;
+      //Act
+      string result = vendor.Name;
 
-    //Assert
-    Assert.AreEqual(name, result);
-  }
+      //Assert
+      Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsCategoryId_Int()
+    {
+      //Arrange
+      string name = "Test Category";
+      Vendor vendor = new Vendor(name);
+
+      //Act
+      int result = 0;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
   }
 }
