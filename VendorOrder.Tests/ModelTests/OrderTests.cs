@@ -35,5 +35,21 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(title, result);
     }
+
+    [TestMethod]
+    public void SetTitle_SetTitle_String()
+    {
+      //Arrange
+      string title = "Order title";
+      Order order = new Order(title);
+
+      //Act
+      string newTitle = "Another Order";
+      order.Title = newTitle;
+      string result = order.Title;
+
+      //Assert
+      Assert.AreEqual(newTitle, result);
+    }
   }
 }

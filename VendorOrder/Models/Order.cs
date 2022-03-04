@@ -11,7 +11,7 @@ namespace VendorOrder.Models
 
     public Order (string title)
     {
-      Title = title;
+      Title = "title";
     }
     
     public Order (string title, string description, string price, string date)
