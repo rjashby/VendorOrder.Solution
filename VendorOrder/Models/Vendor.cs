@@ -35,9 +35,7 @@ namespace VendorOrder.Models
 
   public static List<Vendor> GetAll()
     {
-      Vendor fakeVendor = new Vendor("test");
-      List<Vendor> fakeList = new List<Vendor> { fakeVendor };
-      return fakeList;
+      return _instances;
     }
   }
 }
