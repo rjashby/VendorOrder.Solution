@@ -112,7 +112,7 @@ namespace VendorOrder.Tests
       Order order2 = new Order(title2);
 
       //Act
-      Order result = new Order("This is definitely wrong!");
+      Order result = Order.Find(2);
 
       //Assert
       Assert.AreEqual(order2, result);

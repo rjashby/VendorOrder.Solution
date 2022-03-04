@@ -39,7 +39,7 @@ namespace VendorOrder.Models
 
     public static Order Find(int searchId)
     {
-      return new Order("Bacon");
+      return _orders[searchId-1];
     }
   }
 }
