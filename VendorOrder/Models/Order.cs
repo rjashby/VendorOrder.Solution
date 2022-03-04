@@ -29,5 +29,10 @@ namespace VendorOrder.Models
     {
       return _orders;
     }
+
+    public static void ClearAll()
+    {
+      _orders.Clear();
+    }
   }
 }
