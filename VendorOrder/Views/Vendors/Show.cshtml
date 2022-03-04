@@ -13,10 +13,12 @@
     <ol>
     @foreach (Order order in @Model["orders"])
     {
-      <li></li>
+      <li><a href='/categories/@Model["category"].Id/items/@item.Id'>@item.Description</a></li>
     }
     </ol>
-
+  
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+    <p><a href='/vendrs'>Return to vendor list</a></p>
     <p><a href='/'>Return to Main Page</a></p>
   </body>
 </html>
