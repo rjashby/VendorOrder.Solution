@@ -32,5 +32,12 @@ namespace VendorOrder.Models
   {
     _instances.Clear();
   }
+
+  public static List<Vendor> GetAll()
+    {
+      Vendor fakeVendor = new Vendor("test");
+      List<Vendor> fakeList = new List<Vendor> { fakeVendor };
+      return fakeList;
+    }
   }
 }
