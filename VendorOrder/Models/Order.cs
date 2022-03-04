@@ -8,14 +8,14 @@ namespace VendorOrder.Models
     public string Description { get; set; }
     public string Price { get; set; }
     public string Date { get; set; }
- 
+    public int Id { get; }
 
     private static List<Order> _orders = new List<Order> {};
     public Order (string title)
     {
       Title = title;
       _orders.Add(this);
-  
+      Id = _orders.Count;
     }
     
     public Order (string title, string description, string price, string date)

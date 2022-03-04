@@ -96,7 +96,7 @@ namespace VendorOrder.Tests
       Order order = new Order(title);
 
       //Act
-      int result = 0;
+      int result = order.Id;
 
       //Assert
       Assert.AreEqual(1, result);
