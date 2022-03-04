@@ -9,6 +9,11 @@ namespace VendorOrder.Models
     public string Price { get; set; }
     public string Date { get; set; }
 
+    public Order (string title)
+    {
+      Title = title;
+    }
+    
     public Order (string title, string description, string price, string date)
     {
       Title = title;
