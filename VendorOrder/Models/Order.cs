@@ -10,12 +10,12 @@ namespace VendorOrder.Models
     public string Date { get; set; }
     public int Id { get; }
 
-    private static List<Order> _orders = new List<Order> {};
+    private static List<Order> _instances = new List<Order> {};
     public Order (string title)
     {
       Title = title;
-      _orders.Add(this);
-      Id = _orders.Count;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
     
     public Order (string title, string description, string price, string date)
@@ -29,17 +29,17 @@ namespace VendorOrder.Models
 
     public static List<Order> GetAll()
     {
-      return _orders;
+      return _instances;
     }
 
     public static void ClearAll()
     {
-      _orders.Clear();
+      _instances.Clear();
     }
 
     public static Order Find(int searchId)
     {
-      return _orders[searchId-1];
+      return _instances[searchId-1];
     }
   }
 }
