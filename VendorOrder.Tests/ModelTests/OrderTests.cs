@@ -6,8 +6,13 @@ using System;
 namespace VendorOrder.Tests
 {
   [TestClass]
-  public class OrderTests : IDisposable
+  public class OrderTests
   {
-
+    [TestMethod]
+    public void OrdderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      Order order = new Order("test");
+      Assert.AreEqual(typeof(Order), order.GetType());
+    }
   }
 }

@@ -6,7 +6,7 @@ using System;
 namespace VendorOrder.Tests
 {
   [TestClass]
-  public class VendorTests : IDisposable
+  public class VendorTests
   {
 
   }
