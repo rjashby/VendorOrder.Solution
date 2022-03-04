@@ -94,7 +94,7 @@ namespace VendorOrder.Tests
       vendor.AddOrder(order);
 
       //Act
-      List<Order> result = new List<Order>();
+      List<Order> result = vendor.Orders;
 
       //Assert
       CollectionAssert.AreEqual(newList, result);
