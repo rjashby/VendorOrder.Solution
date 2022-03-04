@@ -40,7 +40,7 @@ namespace VendorOrder.Models
 
     public static Vendor Find(int searchId)
     {
-      return new Vendor("Fake Vendor");
+      return _instances[searchId-1];
     }
   }
 }
