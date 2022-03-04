@@ -9,9 +9,11 @@ namespace VendorOrder.Models
     public string Price { get; set; }
     public string Date { get; set; }
 
+    private static List<Order> _orders = new List<Order> {};
     public Order (string title)
     {
       Title = title;
+      _orders.Add(this);
     }
     
     public Order (string title, string description, string price, string date)
@@ -21,6 +23,11 @@ namespace VendorOrder.Models
       Price = price;
       Date = date;
 
+    }
+
+    public static List<Order> GetAll()
+    {
+      return _orders;
     }
   }
 }
