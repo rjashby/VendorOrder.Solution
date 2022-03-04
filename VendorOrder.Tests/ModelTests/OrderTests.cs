@@ -101,5 +101,21 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string title1 = "Order title";
+      string title2 = "Another order title";
+      Order order1 = new Order(title1);
+      Order order2 = new Order(title2);
+
+      //Act
+      Order result = new Order("This is definitely wrong!");
+
+      //Assert
+      Assert.AreEqual(order2, result);
+    }
   }
 }

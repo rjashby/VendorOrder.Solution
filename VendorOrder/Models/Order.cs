@@ -36,5 +36,10 @@ namespace VendorOrder.Models
     {
       _orders.Clear();
     }
+
+    public static Order Find(int searchId)
+    {
+      return new Order("Bacon");
+    }
   }
 }
