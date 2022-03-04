@@ -6,8 +6,14 @@ using System;
 namespace VendorOrder.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+
+    public void Dispose()
+    {
+      Category.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
