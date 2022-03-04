@@ -11,7 +11,7 @@ namespace VendorOrder.Tests
 
     public void Dispose()
     {
-      Category.ClearAll();
+      Vendor.ClearAll();
     }
 
     [TestMethod]
@@ -20,5 +20,19 @@ namespace VendorOrder.Tests
       Vendor vendor = new Vendor("test vendor");
       Assert.AreEqual(typeof(Vendor), vendor.GetType());
     }
+
+    [TestMethod]
+  public void GetName_ReturnsName_String()
+  {
+    //Arrange
+    string name = "Test Vendor";
+    Vendor vendor = new Vendor(name);
+
+    //Act
+    string result = vendor.Name;
+
+    //Assert
+    Assert.AreEqual(name, result);
+  }
   }
 }
