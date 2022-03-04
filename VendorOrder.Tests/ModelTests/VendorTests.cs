@@ -43,7 +43,7 @@ namespace VendorOrder.Tests
       Vendor vendor = new Vendor(name);
 
       //Act
-      int result = 0;
+      int result = vendor.Id;
 
       //Assert
       Assert.AreEqual(1, result);
